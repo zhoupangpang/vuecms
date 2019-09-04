@@ -5,6 +5,8 @@ import Home from '@/components/Home'
 import Shop from '@/components/Shop'
 import Search from '@/components/Search'
 import Member from '@/components/Member'
+import NewsList from '@/components/News/newsList'
+import ListInfo from '@/components/News/ListInfo'
 Vue.use(Router)
 
 export default new Router({
@@ -20,7 +22,11 @@ export default new Router({
     },
     {
       path: '/home',
-      component: Home
+      component: Home,
+      // children: [{
+      //   path: 'newslist',
+      //   component: NewsList,
+      // }]
     },
     {
       path: '/member',
@@ -33,6 +39,14 @@ export default new Router({
     {
       path: '/search',
       component: Search
+    },
+    {
+        path: '/home/newslist',
+        component: NewsList,
+    },
+    {
+      path: '/home/listinfo/:id',
+      component: ListInfo,
     }
   ]
 })

@@ -3,9 +3,9 @@
     <!-- <img src="./assets/logo.png"> -->
     <!-- <router-view/> -->
     <!-- 头部 -->
-    <mt-header fixed title="Vue项目"></mt-header>
+    <mt-header fixed title="vue project"></mt-header>
     <!-- 中间路由router-view -->
-    <router-view >123</router-view>
+    <router-view ></router-view>
     <!-- 尾部 -->
     <nav class="mui-bar mui-bar-tab">
 		  <router-link class="mui-tab-item mui-active" to="/home">
@@ -46,4 +46,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
