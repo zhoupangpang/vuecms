@@ -3,7 +3,7 @@
     <!-- <img src="./assets/logo.png"> -->
     <!-- <router-view/> -->
     <!-- 头部 -->
-    <mt-header fixed title="vue project"></mt-header>
+    <mt-header fixed title="vue"></mt-header>
     <!-- 中间路由router-view -->
     <router-view ></router-view>
     <!-- 尾部 -->

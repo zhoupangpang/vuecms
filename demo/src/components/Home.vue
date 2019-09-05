@@ -11,10 +11,10 @@
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/newslist">
 		                    <span class="mui-icon mui-icon-help"></span>
 		                    <div class="mui-media-body">新闻咨询</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/imgshare">
 		                    <span class="mui-icon mui-icon-image"><span class="mui-badge">5</span></span>
 		                    <div class="mui-media-body">图片分享</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/shoplist">
 		                    <span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
 		                    <div class="mui-media-body">商品购买</div></router-link></li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">

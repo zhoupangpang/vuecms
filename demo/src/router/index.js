@@ -7,6 +7,10 @@ import Search from '@/components/Search'
 import Member from '@/components/Member'
 import NewsList from '@/components/News/newsList'
 import ListInfo from '@/components/News/ListInfo'
+import ImgShare from '@/components/Img/ImgShare'
+import ImgInfo from '@/components/Img/ImgInfo'
+import ShopList from '@/components/Shop/ShopList'
+import ShopInfo from '@/components/Shop/ShopInfo'
 Vue.use(Router)
 
 export default new Router({
@@ -47,6 +51,23 @@ export default new Router({
     {
       path: '/home/listinfo/:id',
       component: ListInfo,
-    }
+    },
+    {
+      path: '/home/imgshare',
+      component: ImgShare,
+    },
+    {
+      path: '/home/imginfo/:id',
+      component: ImgInfo
+    },
+    {
+      path: '/home/shoplist',
+      component: ShopList
+    },
+    {
+      path: '/home/shopinfo/:id',
+      component: ShopInfo,
+      name: 'shopinfo'
+    },
   ]
 })

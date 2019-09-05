@@ -7,14 +7,22 @@ import axios from 'axios'
 Vue.prototype.$axios= axios
 // import golbal_ from './components/Global'
 // axios.defaults.baseURL = golbal_.BASE_URL
+// 使用mui
 import './lib/mui/css/mui.min.css'
 import './lib/mui/css/icons-extra.css'
+// mint-ui
 import { Header,Swipe, SwipeItem,Button} from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.component(Header.name, Header);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Button.name, Button);
+// import MintUI from 'mint-ui'
+// import 'mint-ui/lib/style.css'
+// Vue.use(MintUI)
+// 使用缩略图
+import VuePreview from 'vue-preview';
+Vue.use(VuePreview);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
