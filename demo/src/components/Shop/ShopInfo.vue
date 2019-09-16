@@ -9,11 +9,11 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <span>现价：{{list.now_price}}</span>
             </div>
-
-            <Number></Number>
+            <!-- <div>{{$store.state.test}}</div> -->
+            <Number @getcount="getChildCount"></Number>
 
             <mt-button type="primary">立即购买</mt-button>
-            <mt-button type="danger">加入购物车</mt-button> 
+            <mt-button type="danger" @click="addCart">加入购物车</mt-button> 
         </div>
         <div class="diva">
            <h4>商品详情</h4>
@@ -30,13 +30,18 @@ export default {
     data() {
         return {
             id: this.$route.params.id,
-            list: []
+            list: [],
+            count: 0,
         }
     },
     created() {
         this.getInfo();
     },
     methods: {
+        getChildCount(count) {
+            this.count = count;
+            console.log(this.count);
+        },
          getInfo() {
               this.$axios({
                 methods: 'get',
@@ -50,6 +55,17 @@ export default {
                 Toast('获取失败');
             })
         },
+        addCart() {
+            // 拼接出要加入store的商品信息
+            var goodinfo = {
+                id: this.id,
+                count: this.count,
+                price: this.list.now_price,
+                selected: true
+            };
+            // console.log(goodinfo);
+            this.$store.commit('addToCart', goodinfo);
+        }
     },
     components: {
         Number,

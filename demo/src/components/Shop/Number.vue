@@ -1,9 +1,8 @@
 <template>
     <div class="divz">
-        <p class="buy_num">购买数量:</p>
-        <button class="btn_minute" @click="btnMinute">-</button>
-        <input type="text" value="0" size="1" v-model="count">
-        <button class="btn_add" @click="btnAdd">+</button>
+        <input type="buttom" class="btn_minute" @click="btnMinute" value="-">
+        <input type="text"  class="content" value="0"  v-model="count">
+        <input type="buttom"  class="btn_add" @click="btnAdd" value="+">
     </div>
 </template>
 <script>
@@ -22,7 +21,7 @@ export default {
         if (this.count >= 1000) {
           Toast('该宝贝不能购买更多了~')
         } else {
-          this.count++
+          this.count++;
         }
       },
       /*
@@ -32,34 +31,32 @@ export default {
         if (this.count <= 0) {
           Toast('该宝贝不能减少了哟~')
         } else {
-          this.count -= 1
+          this.count -= 1;
+          
         }
       }
+    },
+    watch: {
+        count() {
+            this.$emit('getcount', this.count); 
+        }
     }
 }
 </script>
 <style scoped>
 .divz{
     display: flex;
-    height: 40px;
-    padding-bottom: 10px;
-
-}
-.buy_num{
-    flex: 1.5;
-    font-size: 18px;
-    text-align: left;
-    line-height: 40px;
-    color:black;
+    height: 22px;
+    margin-bottom: 10px;
 }
 .btn_minute,.btn_add {
-    flex: 1;
-    height: 30px;
-}
-input{
+   width: 25px;
+   text-align: center;
     background: #f5f5f5;
-    flex: 1;
-    height: 30px;
+}
+.content{
+    width: 60px;
+    height: 20px;
 }
 
 </style>

@@ -11,12 +11,13 @@ Vue.prototype.$axios= axios
 import './lib/mui/css/mui.min.css'
 import './lib/mui/css/icons-extra.css'
 // mint-ui
-import { Header,Swipe, SwipeItem,Button} from 'mint-ui'
+import { Header,Swipe, SwipeItem,Button,Switch} from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.component(Header.name, Header);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Button.name, Button);
+Vue.component(Switch.name, Switch);
 // import MintUI from 'mint-ui'
 // import 'mint-ui/lib/style.css'
 // Vue.use(MintUI)
@@ -25,10 +26,12 @@ import VuePreview from 'vue-preview';
 Vue.use(VuePreview);
 Vue.config.productionTip = false
 
+import store from './store'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store,
 })
